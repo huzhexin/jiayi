@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" /><!--CSS RESET-->
+	<link href="https://fonts.googleapis.com/css?family=Lato:900|Rye&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize2.css" /><!--CSS RESET-->
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo2.css"><!--演示页面样式，使用时可以不引用-->
+	<link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
+	<style>
+		.wrapper{
+		  background: #252854;
+		  width: 100%;
+		  height:500px;
+		  border-radius: 5px;
+		  position: relative;  
+		}
+		.text{
+		  flex: 0 0 100%;
+		  font-size: 14rem;
+		  font-weight: 900;
+		  color: #00000000;
+		  text-align: center;
+		  font-family: 'Lato', sans-serif;
+		  position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  transform: translate(-50%, -50%);
+		  border-bottom: 1px solid #d4d7ff;
+		  border-top: 1px solid #d4d7ff;
+		  background: url(./img/source.gif);
+		  background-clip: text;
+		  -webkit-background-clip: text;
+		}
+		  
+		 .text:after{
+		   content: attr(data-text);
+		   -webkit-text-stroke: 1.5px #d4d7ff;
+		   position: absolute;
+		   left: 50%;
+		   top: 50%;
+		   transform: translate(-50%, -49%);
+		   background: url(./img/source.gif);
+		   background-clip: text;
+		   -webkit-background-clip: text;
+		   background-size: 43%;
+
+		}
+			.demo1{ background: #222; }
+		.text-effect1{
+		    color: #ffff00;
+		    font-family: 'Cabin Sketch', cursive;
+		    font-size: 100px;
+		    text-align: center;
+		    text-transform: uppercase;
+		    margin: 0 auto;
+		    position: relative;
+		}
+		.text-effect1 span{
+		    display: inline-block;
+		    animation: animate 0.5s linear infinite both;
+		}
+		.text-effect1 span:nth-child(1),
+		.text-effect1 span:nth-child(4),
+		.text-effect1 span:nth-child(7),
+		.text-effect1 span:nth-child(10){
+		   color: #4cd137;
+		}
+		.text-effect1 span:nth-child(2),
+		.text-effect1 span:nth-child(5),
+		.text-effect1 span:nth-child(8){
+		   color: #ff0000;
+		}
+		@keyframes animate1{
+		    0%, 50%, 100%{ transform: rotate(0deg) scale(1); }
+		    25%{ transform: rotate(4deg) scale(0.98); }
+		    75%{ transform: rotate(-4deg) scale(1.02); }
+		}
+		@media only screen and (max-width: 990px){
+		    .text-effect{ font-size: 100px; }
+		}
+		@media only screen and (max-width: 767px){
+		    .text-effect{ font-size: 80px; }
+		}
+		@media only screen and (max-width: 479px){
+		    .text-effect{ font-size: 60px; }
+		}
+		@media only screen and (max-width: 359px){
+		    .text-effect{ font-size: 45px; }
+		}
+
+
+
+
+.text-effect2{
+    color: #fff;
+    font-family: 'Monoton', cursive;
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+.text-effect2 span{ animation: animate2 linear 2000ms infinite; }
+.text-effect2 span:nth-child(1n){ animation-delay: 0s; }
+.text-effect2 span:nth-child(2n){ animation-delay: 100ms; }
+.text-effect2 span:nth-child(3n){ animation-delay: 200ms; }
+.text-effect2 span:nth-child(4n){ animation-delay: 300ms; }
+.text-effect2 span:nth-child(5n){ animation-delay: 400ms; }
+.text-effect2 span:nth-child(6n){ animation-delay: 500ms; }
+.text-effect2 span:nth-child(7n){ animation-delay: 600ms; }
+.text-effect2 span:nth-child(8n){ animation-delay: 700ms; }
+.text-effect2 span:nth-child(9n){ animation-delay: 800ms; }
+.text-effect2 span:nth-child(10n){ animation-delay: 900ms; }
+@keyframes animate2{
+    0%{ opacity: 0.3; }
+    100%{
+       opacity:1;
+       text-shadow: 0 0 80px Red,0 0 30px orange,0 0 6px DarkRed;
+    }
+}
+
+
+.text-effect3{
+		    color: #fff;
+		    font-family: 'Frijole', cursive;
+		    font-size: 80px;
+		    text-transform: uppercase;
+		    text-align: center;
+		    letter-spacing: 8px;
+		    margin: 30px auto 0;
+		    animation3: 4s animate infinite linear;
+		}
+		@keyframes animate3{
+		    0%{ text-shadow: 0 0 0 white; }
+		    40%{
+		        color: rgba(255,255,255,0);
+		        text-shadow: 0 0 30px white;
+		    }
+		    70%{
+		        color: rgba(255,255,255,0.4);
+		        text-shadow: 0 0 10px white;
+		    }
+		    90%{
+		        color: rgba(255,255,255,0.6);
+		        text-shadow: 0 0 30px white;
+		    }
+		    100%{ text-shadow: 0 0 40px rgba(255,255,255,0); }
+		}
+
+
+
+
+.d2{
+color: white;
+text-shadow:
+0px 0px 20px yellow,
+0px 0px 10px orange,
+0px 0px 10px orangered,
+0px 0px 10px red;
+}
+
+
+.d1{
+color: #fff;
+text-shadow:  0px 0px 10px black;
+}
+
+.d3{
+color: #fff;
+text-shadow: 1px 1px 0px yellow,
+2px 2px 2px orange,
+3px 3px 2px orangered,
+5px 5px 2px red;
+}
+
+
+.d4
+{
+         margin:0px;
+         padding:0px;
+         color:#6B6854;
+         font:14px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.d5
+{
+
+        padding:0; font-family:arial, sans-serif; font-size:12px;
+        margin:0px auto auto auto;
+        color:#36322b;
+}
+.d6 {
+
+        font-family:Arial,Helvetica,sans-serif;font-size:100%;
+        line-height:1em;color:#4e4e4e;
+        min-width:920px;
+
+      }
+
+.huanse{
+    /* 两层背景，没啥技巧 */
+    color: white;
+    text-shadow: 1px 1px 0px #0000FF,2px 2px 0px #0000FF,-1px -1px 0px #E31B4E,-2px -2px 0px #E31B4E;
+}
+
+.chongdie{
+    /* 两层背景，一层与被背景色相同，一层与文字色相同 */
+    color: #eee;
+    text-shadow: 5px 5px 0 #666, 7px 7px 0 #eee;
+}
+
+.nihong{
+    /* 深色底色，浅色文字，多层浅色文字阴影，弥散大 */
+
+    color: white;
+    text-shadow: 0px 0px 15px #00FFFF,0px 0px 15px #00FFFF,0px 0px 15px #00FFFF;
+}
+
+
+	</style>
+</head>
+<body onresize=hero();>
+	<div class="htmleaf-container">
+
+		<div class= "wrapper">
+		  <div class= "text" data-text= "张">张</div>
+		<div>
+			<div class="demo" style="min-height:500px;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="text-effect1">
+								<span class="chongdie">佳</span><span>仪</span><span>佳</span><span class="d2">仪</span>
+							</div>
+							<div class="text-effect2">
+								<span>佳</span><span class="touming">&nbsp;&nbsp;&nbsp;</span><span>&nbsp;&nbsp;&nbsp;</span><span>仪</span>
+								<span>佳</span><span>&nbsp;&nbsp;&nbsp;</span><span>&nbsp;&nbsp;&nbsp;</span><span>仪</span>
+								<span>佳</span><span>&nbsp;&nbsp;&nbsp;</span><span>&nbsp;&nbsp;&nbsp;</span><span>仪</span>
+							</div>
+
+						</div>
+						<div class="col-md-12">
+
+							<div class="text-effect1">
+								<span class="nihong">佳</span><span >仪</span><span >佳</span><span class="chongdie">仪</span>
+
+							</div>
+							<div class="text-effect3">
+								<span>HAPPY</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+			<script language=javascript>
+
+function hero()
+{
+var herowidth=400;//改为你要的网页宽度
+var heroheight=300;//改为你要的网页高度
+window.resizeTo(herowidth,heroheight);
+}
+hero();
+</script>
+
+</body>
+
+</html>
